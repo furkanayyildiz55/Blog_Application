@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+
 
 namespace EntityLayer.Concrete
 {
@@ -23,5 +19,12 @@ namespace EntityLayer.Concrete
         public DateTime BlogCreateDate { get; set; }
 
         public bool BlogStatus  { get; set; }
+
+        public int CategoryID { get; set; }
+        
+        public Category Category{ get; set; }
+
+        public List<Comment> Commnets { get; set; }
+
     }
 }

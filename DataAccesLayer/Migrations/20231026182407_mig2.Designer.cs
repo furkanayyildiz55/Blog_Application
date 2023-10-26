@@ -4,6 +4,7 @@ using DataAccesLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccesLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20231026182407_mig2")]
+    partial class mig2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,42 +125,6 @@ namespace DataAccesLayer.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.Comment", b =>
-                {
-                    b.Property<int>("CommentID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"));
-
-                    b.Property<int>("BlogID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CommentContent")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CommentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("CommentStatus")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("CommentTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CommentUserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CommentID");
-
-                    b.HasIndex("BlogID");
-
-                    b.ToTable("Comments");
-                });
-
             modelBuilder.Entity("EntityLayer.Concrete.Contact", b =>
                 {
                     b.Property<int>("ContactID")
@@ -229,6 +196,37 @@ namespace DataAccesLayer.Migrations
                     b.ToTable("Writers");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.comment", b =>
+                {
+                    b.Property<int>("CommentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"));
+
+                    b.Property<string>("CommentContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("CommentStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("CommentTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CommentUserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CommentID");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Blog", b =>
                 {
                     b.HasOne("EntityLayer.Concrete.Category", "Category")
@@ -238,22 +236,6 @@ namespace DataAccesLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Comment", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Blog", "Blog")
-                        .WithMany("Commnets")
-                        .HasForeignKey("BlogID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Blog");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Blog", b =>
-                {
-                    b.Navigation("Commnets");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>

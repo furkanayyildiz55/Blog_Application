@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class comment
+    public class Comment
     {
         [Key]
         public int CommentID { get; set; }
@@ -21,6 +21,10 @@ namespace EntityLayer.Concrete
         public DateTime CommentDate { get; set; }
 
         public bool  CommentStatus { get; set; }
+
+        public int BlogID { get; set; }
+
+        public Blog Blog { get; set; }
 
 
     }
