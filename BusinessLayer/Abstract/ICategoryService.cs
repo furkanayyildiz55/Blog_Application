@@ -9,7 +9,5 @@ namespace BusinessLayer.Abstract
         void CategoryUpdate(Category category);
         List<Category> GetList(Category category);
         Category GetByID(int id);
-
-
     }
 }

@@ -3,7 +3,7 @@ using DataAccesLayer.Concrete;
 
 namespace DataAccesLayer.Repositories
 {
-    public class CategoryRepository : ICategoryDal
+    public class CategoryRepository 
     {
         Context context = new Context();
 
