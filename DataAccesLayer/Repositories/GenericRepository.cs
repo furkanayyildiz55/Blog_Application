@@ -1,5 +1,6 @@
 ﻿using DataAccesLayer.Abstract;
 using DataAccesLayer.Concrete;
+using System.Linq.Expressions;
 
 namespace DataAccesLayer.Repositories
 {
@@ -28,6 +29,12 @@ namespace DataAccesLayer.Repositories
             using var context = new Context();
             context.Add(t);
 
+        }
+
+        public List<T> GetListAll(Expression<Func<T, bool>> filter)
+        {
+            using var context = new Context();
+            return context.Set<T>().Where(filter).ToList();
         }
 
         public void Update(T t)
