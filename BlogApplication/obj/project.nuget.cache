@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "i4Qc2nwmlG8NJxPxVI3L8BUEaNuo+IsUBR9GAnh+Ar23b6svQuHFxhlKTpL6EENz9JsI01kX2P/SStf18cplRQ==",
+  "dgSpecHash": "30nyPmRFy1HCnWapzN1V/xH8/h5q1oXwY9/PWEWtaVLaJwBGJj9baMJ0KvhKWrT8laSaXGXH9S7MmoaiBlWLTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\furka\\source\\repos\\BlogApplication\\BlogApplication\\BlogApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\furka\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\furka\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\furka\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\furka\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

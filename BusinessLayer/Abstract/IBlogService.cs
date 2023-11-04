@@ -1,9 +1,5 @@
 ﻿using EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BusinessLayer.Abstract
 {
@@ -15,6 +11,5 @@ namespace BusinessLayer.Abstract
         List<Blog> GetList();
         List<Blog> GetBlogListWithCategory();
         Blog GetByID(int id);
-
     }
 }

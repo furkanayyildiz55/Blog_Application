@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WSACikExqAV4oYK7MxVZFam08pQIYGGAcDig4sfwetM=",
+  "Hash": "hA79WHbaRKWWI8rL2NJ8Z/O2jHxw2mJQN4K7ws8XRmY=",
   "Source": "BlogApplication",
   "BasePath": "_content/BlogApplication",
   "Mode": "Default",
@@ -49,23 +49,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\furka\\source\\repos\\BlogApplication\\BlogApplication\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlogApplication.bundle.scp.css"
-    },
-    {
-      "Identity": "C:\\Users\\furka\\source\\repos\\BlogApplication\\BlogApplication\\wwwroot\\CoreBlogTema.zip",
-      "SourceId": "BlogApplication",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\furka\\source\\repos\\BlogApplication\\BlogApplication\\wwwroot\\",
-      "BasePath": "_content/BlogApplication",
-      "RelativePath": "CoreBlogTema.zip",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\CoreBlogTema.zip"
     },
     {
       "Identity": "C:\\Users\\furka\\source\\repos\\BlogApplication\\BlogApplication\\wwwroot\\CoreBlogTema\\about.html",

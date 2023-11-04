@@ -28,7 +28,7 @@ namespace DataAccesLayer.Repositories
         {
             using var context = new Context();
             context.Add(t);
-
+            context.SaveChanges();
         }
 
         public List<T> GetListAll(Expression<Func<T, bool>> filter)
