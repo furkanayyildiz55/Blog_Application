@@ -34,7 +34,8 @@ namespace DataAccesLayer.Repositories
         public List<T> GetListAll(Expression<Func<T, bool>> filter)
         {
             using var context = new Context();
-            return context.Set<T>().Where(filter).ToList();
+            var result = context.Set<T>().Where(filter).ToList();
+            return result; 
         }
 
         public void Update(T t)

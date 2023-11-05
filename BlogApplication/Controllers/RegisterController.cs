@@ -39,9 +39,9 @@ namespace BlogApplication.Controllers
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
                 ViewBag.IsRecorded = false;
+                //ViewBag.KeyValuePair = new KeyValuePair<int, string>(1, "asd");
             }
             return View();
-            //return RedirectToAction("Index","Blog");
         }
     }
 }
