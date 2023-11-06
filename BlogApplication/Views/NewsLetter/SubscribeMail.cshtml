@@ -1,0 +1,52 @@
+﻿<div class="tech-btm">
+	<h4>Mail Bültenine Abone Olun !</h4>
+	<p>Her yeni yazıda mail almak çok heycanlı ;)</p>
+	<form id="subscribeForm" method="post">
+		<input id="emailInput" type="email" placeholder="Email" required="" name="Mail">
+		<p id="emailError" class="text-danger"></p>
+		<input type="submit" value="Abone Ol" onclick="    subscribeForm(); return false;">
+	</form>
+</div>
+
+
+<script type="text/javascript">
+	function subscribeForm() {
+		var data = $("#subscribeForm").serialize();
+		$.ajax({
+			type: 'POST',
+			url: '/NewsLetter/SubscribeMail',
+			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+			data: data,
+			success: function(result) {
+				if (!result.status) {
+					document.getElementById("emailError").innerHTML = result.message
+				}
+				else {
+					showToastMessage();
+                    document.getElementById("emailInput").value	 = "";
+				}
+			},
+			error: function(result) {
+				alert("Failed");
+				console.log('Failed ');
+			}
+		})
+	}
+
+
+	function showToastMessage() {
+		Toastify({
+			text: "Kayıt işlemi tamamlandı.",
+			duration: 3000,
+			newWindow: true,
+			close: true,
+			gravity: "top", // `top` or `bottom`
+			position: "right", // `left`, `center` or `right`
+			stopOnFocus: true, // Prevents dismissing of toast on hover
+			style: {
+				background: "linear-gradient(to right, #00b09b, #96c93d)",
+			},
+			onClick: function() { } // Callback after click
+		}).showToast();
+	}
+</script>
