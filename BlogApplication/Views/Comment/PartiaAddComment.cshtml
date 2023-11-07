@@ -4,12 +4,20 @@
 	<h4>Yorum Ekle</h4>
 	<div class="comment-bottom">
 		<form id="commentForm" method="post">
-			<input    type="hidden" name="BlogID" value="@Model.BlogID">
-			<input	  class="form-control" type="text" name="CommentUserName" placeholder="İsim" >
-			<input    class="form-control" type="text" name="CommentTitle" placeholder="Başlık" >
-			<input    class="form-control" type="text" name="CommentContent" placeholder="Yorumunuz..." >
-			<textarea class="form-control" name="Message" placeholder="Message..." required=""></textarea>
-			<button   type="submit" class="btn btn-primary submit" onclick="commentForm(); return false;">Yorum Yap</button>
+			<input type="hidden" name="BlogID" value="@Model.BlogID">
+
+			<input class="form-control" type="text" name="CommentUserName" placeholder="İsim">
+			<p id="CommentUserName" class="text-danger"></p>
+
+			<input class="form-control" type="text" name="CommentTitle" placeholder="Başlık">
+			<p id="CommentTitle" class="text-danger"></p>
+
+			<input class="form-control" type="text" name="" placeholder="Web Siteniz">
+
+			<textarea class="form-control" name="CommentContent" placeholder="Message..." required=""></textarea>
+			<p id="CommentContent" class="text-danger"></p>
+
+			<button type="submit" class="btn btn-primary submit" onclick="commentForm(); return false;">Yorum Yap</button>
 		</form>
 	</div>
 </div>
@@ -24,13 +32,26 @@
 			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
 			data: data,
 			success: function(result) {
-				if (!result.status) {
-					//document.getElementById("emailError").innerHTML = result.message
+				console.log(result)
+				var parsedData = JSON.parse(result);
+
+				// Veriyi ayrıştırdıktan sonra erişebilirsiniz
+				var status = parsedData.status;
+				var resultMessages = parsedData.resultMessages;
+
+
+				if (status) {
+					showToastMessage2();
 				}
 				else {
-					alert(result.message)
-					//showToastMessage();
-                    //document.getElementById("emailInput").value	 = "";
+					// resultMessages içindeki öğeleri dolaşabilirsiniz
+					for (var i = 0; i < resultMessages.length; i++) {
+
+						var propertyName = resultMessages[i].propertyName;
+						var message = resultMessages[i].message;
+
+						document.getElementById(propertyName).innerHTML = message
+					}
 				}
 			},
 			error: function(result) {
@@ -41,9 +62,9 @@
 	}
 
 
-	function showToastMessage() {
+	function showToastMessage2() {
 		Toastify({
-			text: "Kayıt işlemi tamamlandı.",
+			text: "Yorumunuz Eklendi...",
 			duration: 3000,
 			newWindow: true,
 			close: true,

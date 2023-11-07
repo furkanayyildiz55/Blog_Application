@@ -2,8 +2,14 @@
 {
     public class AjaxResultDTO
     {
+        public AjaxResultDTO()
+        {
+            resultMessages = new List<ResultMessage>();
+        }
+
         public bool status{ get; set; }
         public List<ResultMessage> resultMessages { get; set; }
+
     }
 
     public class ResultMessage

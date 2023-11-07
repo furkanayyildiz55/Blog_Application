@@ -25,7 +25,7 @@ namespace BlogApplication.Controllers
         }
 
         [HttpPost]
-        public JsonResult PartiaAddComment(Comment comment)
+        public String PartiaAddComment(Comment comment)
         {
             comment.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             //TODO:yorum durumu, daha sonradan false yapılıp admin kontrolünde olacak
@@ -35,25 +35,29 @@ namespace BlogApplication.Controllers
             CommentValidator validationRules = new CommentValidator();
             ValidationResult validationResult = validationRules.Validate(comment);
 
+            AjaxResultDTO ajaxResultDTO = new AjaxResultDTO();
+
+
             if (validationResult.IsValid)
             {
                 commentManager.CommentAdd(comment);
-                return Json(new { status = true, message = "Yorumunuz eklendi..." });
+                ajaxResultDTO.status = true;
+                ResultMessage resultMessage = new ResultMessage("userMessage", "Yorum eklendi. İlginiz için teşekkürler.");
+                ajaxResultDTO.resultMessages.Add(resultMessage);
+                return JsonConvert.SerializeObject(ajaxResultDTO);
+
             }
             else
             {
-                AjaxResultDTO ajaxResultDTO = new AjaxResultDTO();
                 ajaxResultDTO.status = false;
 
-               
                 foreach (var item in validationResult.Errors)
                 {
-                    ResultMessage resultMessage = new ResultMessage(item.PropertyName, item.ErrorMessage); 
+                    ResultMessage resultMessage = new ResultMessage(item.PropertyName, item.ErrorMessage);
+                    ajaxResultDTO.resultMessages.Add(resultMessage);
                 }
 
-                string jsonData = JsonConvert.SerializeObject(ajaxResultDTO);
-                //return Content(jsonData, "application/json");
-
+                return JsonConvert.SerializeObject(ajaxResultDTO);
             }
 
 
