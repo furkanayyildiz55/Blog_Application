@@ -45,8 +45,8 @@ namespace DataAccesLayer.Migrations
                     b.Property<string>("AboutMapLocaiton")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("AboutStatus")
-                        .HasColumnType("int");
+                    b.Property<bool>("AboutStatus")
+                        .HasColumnType("bit");
 
                     b.HasKey("AboutID");
 

@@ -22,7 +22,7 @@ namespace EntityLayer.Concrete
 
         public string? AboutMapLocaiton { get; set; }
 
-        public int AboutStatus { get; set; }
+        public bool AboutStatus { get; set; }
 
     }
 }
