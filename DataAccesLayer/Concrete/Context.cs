@@ -9,7 +9,7 @@ namespace DataAccesLayer.Concrete
         //Veritabanı adresini veriyoruz
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"data source=DESKTOP-7CEF0R1;initial catalog=blog_db2;trusted_connection=true;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"");
         }
 
         public DbSet<About> Abouts { get; set; }

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "znUJkiy1H7ex1no2NLZAsLD3IWoQfy40X2mgbeHvHWBF6wnJq4cTz7gqly3R5LH7zpsTLVnBKHtpN6kv3A0T9w==",
+  "dgSpecHash": "Zau6Qb2HLdq2gYAoVFvfQl42jsiRJeYsQhuq5D3trZZT9wMQy0a8kIN+JYKDllWKmRhe1H4ZsRUlBMgR5Y4b+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\furka\\source\\repos\\BlogApplication\\CoreLayer\\CoreLayer.csproj",
+  "projectFilePath": "C:\\Users\\furkan.ayyildiz\\source\\repos\\furkanayyildiz55\\Blog_Application\\CoreLayer\\CoreLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\furka\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
-    "C:\\Users\\furka\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
-    "C:\\Users\\furka\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
-    "C:\\Users\\furka\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+    "C:\\Users\\furkan.ayyildiz\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\furkan.ayyildiz\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\furkan.ayyildiz\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "C:\\Users\\furkan.ayyildiz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
   ],
   "logs": []
 }
