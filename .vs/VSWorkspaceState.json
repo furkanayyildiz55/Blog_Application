@@ -1,10 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\BlogApplication",
-    "\\BlogApplication\\Views",
-    "\\BlogApplication\\Views\\Login"
+    ""
   ],
-  "SelectedNode": "\\BlogApplication\\Views\\Login\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -1,5 +1,6 @@
 ﻿using DataAccesLayer.Concrete;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -29,9 +30,9 @@ namespace BlogApplication.Controllers
                     new Claim(ClaimTypes.Name , writer.WriterMail)
                 };
                 var userIdentity = new ClaimsIdentity(claims, "a");
-
-                HttpContext.Session.SetString("username", writer.WriterMail);
-                return RedirectToAction("Index", "Writer");
+                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
+                await HttpContext.SignInAsync(principal);
+                return RedirectToAction("Index", "Blog");
             }
             else
             {

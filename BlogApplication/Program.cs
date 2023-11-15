@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //SESSÝON KULLANIMI ÝÇÝN
-builder.Services.AddSession(); 
+//builder.Services.AddSession(); 
 
 //Proje seviyesinde Authorize kullanabilmek için
 builder.Services.AddMvc(config =>
@@ -47,7 +47,10 @@ app.UseStaticFiles();
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1", "?code={0}");
 
 //SESSÝON KULLANIMI ÝÇÝN
-app.UseSession();
+//app.UseSession();
+
+//Auth iþlemleri için
+app.UseAuthentication();
 
 app.UseRouting();
 
