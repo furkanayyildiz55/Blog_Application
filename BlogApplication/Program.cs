@@ -1,7 +1,33 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using System.Net;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//SESSÝON KULLANIMI ÝÇÝN
+builder.Services.AddSession(); 
+
+//Proje seviyesinde Authorize kullanabilmek için
+builder.Services.AddMvc(config =>
+{
+    var policy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .Build();
+    config.Filters.Add(new AuthorizeFilter(policy));
+});
+
+builder.Services.AddMvc();
+//LOGIN SAYFASINA YÖNLENDÝRME 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(x =>
+    {
+        x.LoginPath = "/Login/Index";
+    });
+
 
 var app = builder.Build();
 
@@ -20,6 +46,8 @@ app.UseStaticFiles();
 
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1", "?code={0}");
 
+//SESSÝON KULLANIMI ÝÇÝN
+app.UseSession();
 
 app.UseRouting();
 
