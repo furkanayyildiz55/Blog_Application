@@ -2914,9 +2914,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\furkan.ayyildiz\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\DataAccesLayer\\DataAccesLayer.csproj",
+      "projectUniqueName": "C:\\Users\\furkan.ayyildiz\\source\\repos\\furkanayyildiz55\\Blog_Application\\DataAccesLayer\\DataAccesLayer.csproj",
       "projectName": "DataAccesLayer",
-      "projectPath": "C:\\Users\\furkan.ayyildiz\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\DataAccesLayer\\DataAccesLayer.csproj",
+      "projectPath": "C:\\Users\\furkan.ayyildiz\\source\\repos\\furkanayyildiz55\\Blog_Application\\DataAccesLayer\\DataAccesLayer.csproj",
       "packagesPath": "C:\\Users\\furkan.ayyildiz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\furkan.ayyildiz\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\DataAccesLayer\\obj\\",
       "projectStyle": "PackageReference",
@@ -2935,8 +2935,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\furkan.ayyildiz\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\Users\\furkan.ayyildiz\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Users\\furkan.ayyildiz\\source\\repos\\furkanayyildiz55\\Blog_Application\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Users\\furkan.ayyildiz\\source\\repos\\furkanayyildiz55\\Blog_Application\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }

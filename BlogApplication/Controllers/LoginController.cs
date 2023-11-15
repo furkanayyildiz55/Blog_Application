@@ -2,6 +2,7 @@
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace BlogApplication.Controllers
 {
@@ -16,12 +17,19 @@ namespace BlogApplication.Controllers
 
 		[AllowAnonymous]
         [HttpPost]
-		public IActionResult Index(Writer writer)
+		public async Task<IActionResult> Index (Writer writer)
 		{
+
             Context c = new Context();
-            var data = c.Writers.FirstOrDefault(x => x.WriterMail == writer.WriterMail);
+            var data = c.Writers.FirstOrDefault(x => x.WriterMail == writer.WriterMail && x.WriterPassword == writer.WriterPassword);
             if (data != null) 
             {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name , writer.WriterMail)
+                };
+                var userIdentity = new ClaimsIdentity(claims, "a");
+
                 HttpContext.Session.SetString("username", writer.WriterMail);
                 return RedirectToAction("Index", "Writer");
             }

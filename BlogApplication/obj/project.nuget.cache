@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fN7HwpyOC9Q+6AoAQv7uQMQoPMinLsPt7g0GbIu9Csm+QOnh10j0E/Ucy3T9pRzx0Tq039xAwZEJKXJ+pzCptA==",
+  "dgSpecHash": "afiSU3vQJXT7jYGGd0YN3+GYi9Olmlzfhd/h4VoqrkRMnN3drhuLOtFkDWxFRdVrfiD/vEyyNe/DutPF0PIG3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\furkan.ayyildiz\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\BlogApplication\\BlogApplication.csproj",
+  "projectFilePath": "C:\\Users\\furkan.ayyildiz\\source\\repos\\furkanayyildiz55\\Blog_Application\\BlogApplication\\BlogApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\furkan.ayyildiz\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\furkan.ayyildiz\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
