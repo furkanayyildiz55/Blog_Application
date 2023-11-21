@@ -21,5 +21,10 @@ namespace BlogApplication.Controllers
             var values = bm.GetBlogByID(id);
             return View(values);
         }
-    }
+
+		public IActionResult TestPage()
+		{
+			return View();
+		}
+	}
 }

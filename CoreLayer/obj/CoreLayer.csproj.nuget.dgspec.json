@@ -11,7 +11,7 @@
         "projectName": "CoreLayer",
         "projectPath": "C:\\Users\\furka\\source\\repos\\furkanayyildiz55\\Blog_Application\\CoreLayer\\CoreLayer.csproj",
         "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\furka\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\CoreLayer\\obj\\",
+        "outputPath": "C:\\Users\\furka\\source\\repos\\furkanayyildiz55\\Blog_Application\\CoreLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

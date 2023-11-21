@@ -11,7 +11,7 @@
         "projectName": "EntityLayer",
         "projectPath": "C:\\Users\\furka\\source\\repos\\furkanayyildiz55\\Blog_Application\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\furka\\Source\\Repos\\furkanayyildiz55\\Blog_Application\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\furka\\source\\repos\\furkanayyildiz55\\Blog_Application\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
