@@ -14,6 +14,11 @@ namespace BusinessLayer.Concrete
             this._categoryDal = categoryDal;
         }
 
+        public void Add(Category t)
+        {
+            throw new NotImplementedException();
+        }
+
         public void CategoryAdd(Category category)
         {
             _categoryDal.Insert(category);
@@ -29,6 +34,11 @@ namespace BusinessLayer.Concrete
             _categoryDal.Update(category);
         }
 
+        public void Delete(Category t)
+        {
+            throw new NotImplementedException();
+        }
+
         public Category GetByID(int id)
         {
             return _categoryDal.GetByID(id);
@@ -40,6 +50,11 @@ namespace BusinessLayer.Concrete
         }
 
         public List<Category> GetList(Category category)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Category t)
         {
             throw new NotImplementedException();
         }

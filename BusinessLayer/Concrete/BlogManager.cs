@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,21 +20,6 @@ namespace BusinessLayer.Concrete
         }
 
 
-        public void BlogAdd(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void BlogDelete(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void BlogUpdate(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Blog> GetBlogListWithCategory()
         {
             return _blogDal.GetListWithCategory();
@@ -41,7 +27,7 @@ namespace BusinessLayer.Concrete
 
         public Blog GetByID(int id)
         {
-            throw new NotImplementedException();
+           return _blogDal.GetByID(id); 
         }
 
         public List<Blog> GetBlogByID(int id)
@@ -63,6 +49,27 @@ namespace BusinessLayer.Concrete
 		public List<Blog> GetBlogListWitWriter(int id)
         {
             return _blogDal.GetListAll(f => f.WriterID == id).OrderByDescending( f => f.BlogCreateDate).Take(3).ToList();
+        }
+
+        public void Add(Blog t)
+        {
+            _blogDal.Insert(t);
+
+        }
+
+        public void Delete(Blog t)
+        {
+            _blogDal.Delete(t);
+        }
+
+        public void Update(Blog t)
+        {
+            _blogDal.Update(t);
+        }
+
+        public List<Blog> GetList(Blog t)
+        {
+           return _blogDal.GetListAll();
         }
     }
 }

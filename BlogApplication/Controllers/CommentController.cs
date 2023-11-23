@@ -40,7 +40,7 @@ namespace BlogApplication.Controllers
 
             if (validationResult.IsValid)
             {
-                commentManager.CommentAdd(comment);
+                commentManager.Add(comment);
                 ajaxResultDTO.status = true;
                 ResultMessage resultMessage = new ResultMessage("userMessage", "Yorum eklendi. İlginiz için teşekkürler.");
                 ajaxResultDTO.resultMessages.Add(resultMessage);
