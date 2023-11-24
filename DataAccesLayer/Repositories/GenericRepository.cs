@@ -10,6 +10,8 @@ namespace DataAccesLayer.Repositories
         {
             using var context = new Context();
             context.Remove(t);
+            context.SaveChanges();
+
         }
 
         public T GetByID(int ID)

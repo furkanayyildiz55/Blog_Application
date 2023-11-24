@@ -16,7 +16,18 @@
 			<div class="col-md-7 blog-grid-right">
 
 				<h5>
-					<a href="/Blog/BlogReadAll/@blog.BlogID">@blog.BlogContent.Substring(0,blog.BlogContent.Substring(0,50).LastIndexOf(" "))...</a>
+					<a href="/Blog/BlogReadAll/@blog.BlogID">
+						@if (blog.BlogContent != null && blog.BlogContent.Count() > 131)
+						{
+							@blog.BlogContent.Substring(0,blog.BlogContent.Substring(0,50).LastIndexOf(" "))
+
+						}
+						else
+						{
+							@blog.BlogContent
+						}
+						
+						...</a>
 				</h5>
 				<div class="sub-meta">
 					<span>

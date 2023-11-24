@@ -5,6 +5,7 @@ using EntityLayer.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BlogApplication.Controllers
 {
@@ -12,6 +13,7 @@ namespace BlogApplication.Controllers
     public class BlogController : Controller
     {
         BlogManager bm = new BlogManager(new EfBlogRepository());
+        CategoryManager cm = new CategoryManager(new EfCategoryRepository());
 
         public IActionResult Index()
         {
@@ -32,14 +34,28 @@ namespace BlogApplication.Controllers
 
         public IActionResult BlogListByWriter()
         {
-            var values = bm.GetBlogListWitWriter(1);
+            var values = bm.GetBlogListWithCategoryByWriter(1);
             return View(values);
+        }
 
+        public IActionResult BlogDelete(int id)
+        {
+            Blog blog = bm.GetByID(id);
+            bm.Delete(blog);
+            return RedirectToAction("BlogListByWriter", "Blog");
         }
 
         [HttpGet]
         public IActionResult BlogAdd()
         {
+            List<Category> categories = cm.GetList();
+            List<SelectListItem> SelectListItem = new List<SelectListItem>();
+            foreach (var item in categories)
+            {
+                SelectListItem listItem = new SelectListItem(text: item.CategoryName, value: item.CategoryID.ToString());
+                SelectListItem.Add(listItem);
+            }
+            ViewBag.CategoryItem = SelectListItem;
             return View();
         }
 

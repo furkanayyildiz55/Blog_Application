@@ -24,10 +24,10 @@
     <tr>
         <td>@item.BlogID</td>
         <td>@item.BlogTitle</td>
-        <td>@item.BlogCreateDate</td>
-        <td>@item.CategoryID</td>
-        <td>@item.BlogStatus</td>
-        <td> <a href="#" class="btn btn-danger">Sil</a></td>
+        <td>@(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))</td>
+        <td>@item.Category.CategoryName</td>
+        <td>@(item.BlogStatus == true ? "Aktif" : "Pasif")</td>
+            <td> <a href="/Blog/BlogDelete/@item.BlogID" class="btn btn-danger">Sil</a></td>
         <td> <a href="#" class="btn btn-warning">Düzenle</a></td>
     </tr>
 }

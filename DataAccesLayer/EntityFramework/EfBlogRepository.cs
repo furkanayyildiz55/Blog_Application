@@ -19,5 +19,13 @@ namespace DataAccesLayer.EntityFramework
                 return c.Blogs.Include(x => x.Category).ToList();
             }
         }
+
+        public List<Blog> GetListWithCategoryByWriter(int WriterId)
+        {
+            using (var c = new Context())
+            {
+                return c.Blogs.Include(x => x.Category).Where(x=>x.WriterID == WriterId).ToList();
+            }
+        }
     }
 }
