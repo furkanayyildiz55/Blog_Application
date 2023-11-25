@@ -48,16 +48,11 @@ namespace BlogApplication.Controllers
         [HttpGet]
         public IActionResult BlogAdd()
         {
-            List<Category> categories = cm.GetList();
-            List<SelectListItem> SelectListItem = new List<SelectListItem>();
-            foreach (var item in categories)
-            {
-                SelectListItem listItem = new SelectListItem(text: item.CategoryName, value: item.CategoryID.ToString());
-                SelectListItem.Add(listItem);
-            }
-            ViewBag.CategoryItem = SelectListItem;
+
+            ViewBag.CategoryItem = CategoryItem();
             return View();
         }
+
 
 
         [HttpPost]
@@ -81,6 +76,48 @@ namespace BlogApplication.Controllers
                 }
             }
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult EditBlog(int id)
+        {
+            var Blog = bm.GetByID(id);
+            ViewBag.CategoryItem = CategoryItem();
+            return View(Blog);
+        }
+
+        [HttpPost]
+		public IActionResult EditBlog(Blog blog)
+        {
+            BlogValidator blogValidator = new BlogValidator();
+            ValidationResult results = blogValidator.Validate(blog);
+            if (results.IsValid)
+            {
+                bm.Update(blog);
+                return RedirectToAction("BlogListByWriter", "Blog");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+		}
+
+
+
+        private List<SelectListItem> CategoryItem()
+        {
+            List<Category> categories = cm.GetList();
+            List<SelectListItem> SelectListItem = new List<SelectListItem>();
+            foreach (var item in categories)
+            {
+                SelectListItem listItem = new SelectListItem(text: item.CategoryName, value: item.CategoryID.ToString());
+                SelectListItem.Add(listItem);
+            }
+            return SelectListItem;
         }
     }
 }

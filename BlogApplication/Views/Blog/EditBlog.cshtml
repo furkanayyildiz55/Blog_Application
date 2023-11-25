@@ -1,0 +1,51 @@
+﻿@model EntityLayer.Concrete.Blog
+
+@{
+    ViewData["Title"] = "EditBlog";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Blog Düzenleme</h1>
+
+@using (Html.BeginForm("EditBlog", "Blog", FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.BlogID)
+    @Html.HiddenFor(x=>x.WriterID)
+
+    @Html.Label("Blog Başlığı")
+    @Html.TextBoxFor(x=> x.BlogTitle, new {@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogTitle ,null , new {@class ="text-danger"} )
+    <br />
+    @Html.Label("Blog Görseli")
+    @Html.TextBoxFor(x=> x.BlogImage, new {@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogImage ,null , new {@class ="text-danger"})
+    <br />
+
+    @Html.Label("Blog Min Görseli")
+    @Html.TextBoxFor(x=> x.BlogThumbnailImage, new {@class ="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogThumbnailImage ,null , new {@class ="text-danger"})
+    <br />
+
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.CategoryID , (List<SelectListItem>)ViewBag.CategoryItem , new {@class = "form-control"})
+    @Html.ValidationMessageFor(x=>x.CategoryID ,null , new {@class ="text-danger"})
+    <br />
+
+    @Html.Label("Blog İçeriği")
+    <textarea class="form-control" id="CkEditor" name="BlogContent">@Model.BlogContent</textarea>
+    @Html.ValidationMessageFor(x=>x.BlogContent ,null , new {@class ="text-danger"})
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+
+}
+
+
+<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('CkEditor');
+   // CKEDITOR.instances['CkEditor'].setData(JSON.stringify('@Model.BlogContent'));
+
+</script>
+
+
