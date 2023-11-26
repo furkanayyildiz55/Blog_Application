@@ -7,5 +7,6 @@ namespace BusinessLayer.Abstract
     {
         List<Blog> GetBlogListWithCategory();
         List<Blog> GetBlogListWitWriter(int id);
+        int GetBlogCount(int id);
     }
 }

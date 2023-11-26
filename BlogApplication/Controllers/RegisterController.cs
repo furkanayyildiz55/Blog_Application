@@ -28,7 +28,7 @@ namespace BlogApplication.Controllers
             {
                 writer.WriterStatus = true;
                 writer.WriterAbout = "Test About";
-                WriterManager.WriterAdd(writer);
+                WriterManager.Add(writer);
                 ViewBag.IsRecorded = true;
                 ModelState.Clear();
             }

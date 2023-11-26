@@ -128,6 +128,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcV3JpdGVyTm90aWZpY2F0aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/furka/source/repos/furkanayyildiz55/Blog_Application/BlogApplication/Views/Shared/Components/WrtierAboutOnDashboard/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcV3J0aWVyQWJvdXRPbkRhc2hib2FyZFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/furka/source/repos/furkanayyildiz55/Blog_Application/BlogApplication/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -162,6 +166,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/furka/source/repos/furkanayyildiz55/Blog_Application/BlogApplication/Views/Writer/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV3JpdGVyXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/furka/source/repos/furkanayyildiz55/Blog_Application/BlogApplication/Views/Writer/WriterEditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV3JpdGVyXFdyaXRlckVkaXRQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/furka/source/repos/furkanayyildiz55/Blog_Application/BlogApplication/Views/Writer/WriterFooterPartial.cshtml]

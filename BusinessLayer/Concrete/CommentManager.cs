@@ -40,12 +40,13 @@ namespace BusinessLayer.Concrete
             return _commentDal.GetListAll(f => f.BlogID == id).ToList();
         }
 
-        public List<Comment> GetList(Comment t)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Update(Comment t)
+		public List<Comment> GetList()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void Update(Comment t)
         {
             _commentDal.Update(t);
         }

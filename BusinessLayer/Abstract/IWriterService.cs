@@ -3,12 +3,8 @@
 
 namespace BusinessLayer.Abstract
 {
-    public interface IWriterService
+    public interface IWriterService : IGenericService<Writer>
     {
-        void WriterAdd(Writer writer);
-        void WriterDelete(Writer writer);
-        void WriterUpdate(Writer writer);
-        List<Writer> GetList(Writer writer);
-        Writer GetByID(int id);
+        List<Writer> GetWriterByID(int id);
     }
 }

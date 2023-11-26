@@ -45,7 +45,18 @@ namespace DataAccesLayer.Repositories
             using var context = new Context();
             context.Update(t);
             context.SaveChanges();
-
         }
-    }
+
+        public int GetCount(Expression<Func<T, bool>> filter)
+        {
+			using var context = new Context();
+			return context.Set<T>().Where(filter).Count();
+		}
+
+		public int GetCount()
+		{
+			using var context = new Context();
+			return context.Set<T>().Count();
+		}
+	}
 }
