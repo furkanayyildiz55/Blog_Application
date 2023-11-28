@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a4G4ufVGWHZThJQMzoEXBA7WdguuEi6o4dJIZtVa0Fo=",
+  "Hash": "V/wd5+1Pwx2gfCPltWJdAlnY6hwmhFQn7hSf+BU62A8=",
   "Source": "BlogApplication",
   "BasePath": "_content/BlogApplication",
   "Mode": "Default",
@@ -5047,6 +5047,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\writer\\screenshot.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\furka\\source\\repos\\furkanayyildiz55\\Blog_Application\\BlogApplication\\wwwroot\\WriterImageFiles\\c4c350ff-f944-483c-893e-c3289e8b457c.jpg",
+      "SourceId": "BlogApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\furka\\source\\repos\\furkanayyildiz55\\Blog_Application\\BlogApplication\\wwwroot\\",
+      "BasePath": "_content/BlogApplication",
+      "RelativePath": "WriterImageFiles/c4c350ff-f944-483c-893e-c3289e8b457c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\WriterImageFiles\\c4c350ff-f944-483c-893e-c3289e8b457c.jpg"
     }
   ]
 }
