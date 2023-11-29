@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-	public class IMessageManager : IMessageService
+	public class MessageManager : IMessageService
 	{
 		IMessadeDal _messageDal;
 
-		public IMessageManager(IMessadeDal messageDal)
+		public MessageManager(IMessadeDal messageDal)
 		{
 			_messageDal = messageDal;
 		}
@@ -36,6 +36,11 @@ namespace BusinessLayer.Concrete
 		public List<Message> GetList()
 		{
 			return _messageDal.GetListAll();
+		}
+
+		public List<Message> GetInboxListByWriter(string WriterMail)
+		{
+			return _messageDal.GetListAll(x => x.Receiver == WriterMail);
 		}
 
 		public void Update(Message t)
