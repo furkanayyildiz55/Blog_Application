@@ -22,7 +22,7 @@ namespace DataAccesLayer.Concrete
         public DbSet<NewsLetter> NewsLetters { get; set; }
         public DbSet<BlogRayting> BlogRaytings { get; set; }
         public DbSet<Notification> Notifications { get; set; }
-        public DbSet<Message> Messages { get; set; }
+        public DbSet<Message2> Messages { get; set; }
         public DbSet<Message2> Message2s { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

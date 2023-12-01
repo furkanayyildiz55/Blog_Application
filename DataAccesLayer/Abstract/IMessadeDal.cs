@@ -2,7 +2,7 @@
 
 namespace DataAccesLayer.Abstract
 {
-	public interface IMessadeDal : IGenericDal<Message>
+	public interface IMessadeDal : IGenericDal<Message2>
 	{
 	}
 }
