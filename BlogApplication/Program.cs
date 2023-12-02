@@ -41,6 +41,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -56,8 +57,19 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapControllerRoute(
     name: "default",
     pattern: "{controller=Blog}/{action=Index}/{id?}");
+});
+
+
+
 
 app.Run();
