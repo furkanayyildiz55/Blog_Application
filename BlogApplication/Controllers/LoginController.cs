@@ -7,16 +7,15 @@ using System.Security.Claims;
 
 namespace BlogApplication.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
-        [AllowAnonymous]
 		[HttpGet]
 		public IActionResult Index()
         {
             return View();
         }
 
-		[AllowAnonymous]
         [HttpPost]
 		public async Task<IActionResult> Index (Writer writer)
 		{
@@ -32,7 +31,7 @@ namespace BlogApplication.Controllers
                 var userIdentity = new ClaimsIdentity(claims, "a");
                 ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
                 await HttpContext.SignInAsync(principal);
-                return RedirectToAction("Index", "Blog");
+                return RedirectToAction("Index", "Dashboard");
             }
             else
             {
