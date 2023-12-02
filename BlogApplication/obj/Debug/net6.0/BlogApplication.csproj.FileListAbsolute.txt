@@ -824,3 +824,6 @@ C:\Users\furka\source\repos\furkanayyildiz55\Blog_Application\BlogApplication\ob
 C:\Users\furka\source\repos\furkanayyildiz55\Blog_Application\BlogApplication\obj\Debug\net6.0\BlogApplication.pdb
 C:\Users\furka\source\repos\furkanayyildiz55\Blog_Application\BlogApplication\obj\Debug\net6.0\BlogApplication.genruntimeconfig.cache
 C:\Users\furka\source\repos\furkanayyildiz55\Blog_Application\BlogApplication\obj\Debug\net6.0\ref\BlogApplication.dll
+C:\Users\furka\source\repos\furkanayyildiz55\Blog_Application\BlogApplication\bin\Debug\net6.0\JetBrains.Annotations.dll
+C:\Users\furka\source\repos\furkanayyildiz55\Blog_Application\BlogApplication\bin\Debug\net6.0\X.PagedList.dll
+C:\Users\furka\source\repos\furkanayyildiz55\Blog_Application\BlogApplication\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll

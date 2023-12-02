@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "m9ftsInNb2eTDjyhzvFSjMNanSF7zPP0AAvdsHn3apCQYJnl7FDMV0CWiq9xlvvjuaxMuo/lNZZNdbrLmjgnGQ==",
+  "dgSpecHash": "2WMnA5R54GmRa3y/fowO2DKOfPysLz1gX2RFhh/FkfDWP9CIH7XwP1ydWgdk2mGhsFsBSaKwRPZhqyFl0308tg==",
   "success": true,
   "projectFilePath": "C:\\Users\\furka\\source\\repos\\furkanayyildiz55\\Blog_Application\\BlogApplication\\BlogApplication.csproj",
   "expectedPackageFiles": [
@@ -59,6 +59,7 @@
     "C:\\Users\\furka\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\furka\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -230,7 +231,9 @@
     "C:\\Users\\furka\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\furka\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\furka\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\furka\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\furka\\.nuget\\packages\\x.pagedlist\\8.4.7\\x.pagedlist.8.4.7.nupkg.sha512",
+    "C:\\Users\\furka\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.7\\x.pagedlist.mvc.core.8.4.7.nupkg.sha512"
   ],
   "logs": []
 }
